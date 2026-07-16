@@ -48,7 +48,7 @@ export function TourMap({ tour }: Props) {
       <h2 className="font-heading text-4xl text-primary font-medium mb-8">
         Journey Route
       </h2>
-      <div className="h-[450px] w-full rounded-3xl overflow-hidden shadow-subtle border border-primary/5 relative z-0">
+      <div className="h-[450px] w-full rounded-lg overflow-hidden shadow-sm border border-primary/10 hover:shadow-md hover:border-primary/20 transition-all duration-300 relative z-0">
         <MapContainer
           center={basePos}
           zoom={7}
@@ -61,15 +61,15 @@ export function TourMap({ tour }: Props) {
           
           <Polyline
             positions={route}
-            color="#1D514E"
+            color="#2B7772"
             weight={3}
-            opacity={0.6}
+            opacity={0.7}
             dashArray="10, 10" />
           
           {route.map((pos, idx) =>
           <Marker key={idx} position={pos}>
               <Popup>
-                <div className="font-heading font-medium text-primary">
+                <div className="font-heading font-medium text-primary text-sm">
                   Stop {idx + 1}
                 </div>
               </Popup>
