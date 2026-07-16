@@ -22,27 +22,27 @@ export function JourneyBuilderTeaser() {
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 leading-tight">{t('builderHeading')}</h2>
             <p className="text-base md:text-xl text-white/95 mb-8 leading-relaxed max-w-3xl mx-auto">{t('builderSub')}</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="glass-panel-dark rounded-2xl p-6">
-                <Calendar className="w-10 h-10 text-accent mb-4 mx-auto" />
-                <h3 className="font-heading text-lg font-semibold mb-2">{t('builderFlexDates')}</h3>
+              <div className="border border-white/20 rounded-lg p-6 backdrop-blur-sm hover:border-white/40 transition-all duration-300">
+                <Calendar className="w-9 h-9 text-accent mb-3 mx-auto" />
+                <h3 className="font-heading text-base font-semibold mb-2">{t('builderFlexDates')}</h3>
                 <p className="text-white/80 text-sm">{t('builderFlexDatesSub')}</p>
               </div>
-              <div className="glass-panel-dark rounded-2xl p-6">
-                <MapPin className="w-10 h-10 text-accent mb-4 mx-auto" />
-                <h3 className="font-heading text-lg font-semibold mb-2">{t('builderCustomRoutes')}</h3>
+              <div className="border border-white/20 rounded-lg p-6 backdrop-blur-sm hover:border-white/40 transition-all duration-300">
+                <MapPin className="w-9 h-9 text-accent mb-3 mx-auto" />
+                <h3 className="font-heading text-base font-semibold mb-2">{t('builderCustomRoutes')}</h3>
                 <p className="text-white/80 text-sm">{t('builderCustomRoutesSub')}</p>
               </div>
-              <div className="glass-panel-dark rounded-2xl p-6">
-                <Users className="w-10 h-10 text-accent mb-4 mx-auto" />
-                <h3 className="font-heading text-lg font-semibold mb-2">{t('builderExpertGuidance')}</h3>
+              <div className="border border-white/20 rounded-lg p-6 backdrop-blur-sm hover:border-white/40 transition-all duration-300">
+                <Users className="w-9 h-9 text-accent mb-3 mx-auto" />
+                <h3 className="font-heading text-base font-semibold mb-2">{t('builderExpertGuidance')}</h3>
                 <p className="text-white/80 text-sm">{t('builderExpertGuidanceSub')}</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/trip-planner" className="w-full sm:w-auto px-10 py-5 bg-accent text-ink rounded-full font-semibold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lift hover:-translate-y-1">
+              <Link to="/trip-planner" className="w-full sm:w-auto px-10 py-4 bg-accent text-ink rounded-lg font-semibold hover:bg-accent/90 transition-all duration-300 shadow-sm hover:shadow-md">
                 {t('builderStartPlanning')}
               </Link>
-              <Link to="/custom-tour" className="w-full sm:w-auto px-10 py-5 glass-panel-dark border border-white/30 text-white rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300">
+              <Link to="/custom-tour" className="w-full sm:w-auto px-10 py-4 border border-white/20 rounded-lg text-white font-semibold hover:border-white/40 hover:bg-white/10 transition-all duration-300">
                 {t('builderCustomTour')}
               </Link>
             </div>

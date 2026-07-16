@@ -23,12 +23,12 @@ export const TravellerStories = memo(function TravellerStories() {
         <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide lg:hidden px-4 md:px-8">
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="snap-start shrink-0 w-[80vw] max-w-sm">
-              <div className="bg-white rounded-2xl p-5 shadow-card h-full flex flex-col">
-                <div className="flex gap-1 mb-3">
+              <div className="bg-white rounded-lg p-6 border border-primary/10 shadow-sm h-full flex flex-col">
+                <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
                 </div>
-                <blockquote className="text-sm text-dark/80 mb-4 flex-grow leading-relaxed italic">"{t(testimonial.quoteKey)}"</blockquote>
-                <div className="flex items-center gap-3 pt-3 border-t border-sand">
+                <blockquote className="text-sm text-dark/80 mb-6 flex-grow leading-relaxed">"{t(testimonial.quoteKey)}"</blockquote>
+                <div className="flex items-center gap-3 pt-4 border-t border-primary/10">
                   <img src={testimonial.image} alt={t(testimonial.authorKey)} className="w-10 h-10 rounded-full object-cover" />
                   <div>
                     <div className="font-semibold text-primary text-sm">{t(testimonial.authorKey)}</div>
@@ -44,11 +44,11 @@ export const TravellerStories = memo(function TravellerStories() {
         <div className="hidden lg:grid grid-cols-3 gap-8 container mx-auto px-8">
           {testimonials.map((testimonial, index) => (
             <motion.div key={testimonial.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }}>
-              <div className="bg-white rounded-2xl p-8 shadow-card hover:shadow-lift transition-all duration-500 h-full flex flex-col">
-                <Quote className="w-12 h-12 text-accent/20 mb-6" />
+              <div className="bg-white rounded-lg p-8 border border-primary/10 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-500 h-full flex flex-col">
+                <Quote className="w-10 h-10 text-accent/15 mb-4" />
                 <div className="flex gap-1 mb-6">{[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}</div>
-                <blockquote className="text-lg text-dark/90 mb-8 flex-grow leading-relaxed italic">"{t(testimonial.quoteKey)}"</blockquote>
-                <div className="flex items-center gap-4 pt-6 border-t border-sand">
+                <blockquote className="text-base text-dark/85 mb-8 flex-grow leading-relaxed">"{t(testimonial.quoteKey)}"</blockquote>
+                <div className="flex items-center gap-4 pt-6 border-t border-primary/10">
                   <img src={testimonial.image} alt={t(testimonial.authorKey)} className="w-14 h-14 rounded-full object-cover" />
                   <div>
                     <div className="font-semibold text-primary">{t(testimonial.authorKey)}</div>

@@ -44,13 +44,13 @@ export function FeaturedJourneys() {
             className="lg:row-span-2 group">
             
               <Link to={`/tours/${featured[0].slug}`} className="block h-full">
-                <div className="relative h-[280px] lg:h-full lg:min-h-[440px] rounded-2xl overflow-hidden shadow-card hover:shadow-lift transition-all duration-500">
+                <div className="relative h-[280px] lg:h-full lg:min-h-[440px] rounded-lg overflow-hidden border border-dark/10 shadow-sm hover:shadow-md transition-all duration-500">
                   <img
                   src={featured[0].heroImage}
                   alt={featured[0].title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700" />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
                     <div className="flex items-center gap-4 mb-3 text-sm">
                       <span className="flex items-center gap-1">

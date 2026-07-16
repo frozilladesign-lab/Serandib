@@ -25,14 +25,14 @@ export function SeasonalInspirations() {
             const Icon = season.icon;
             return (
               <motion.div key={season.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
-                <div className="relative rounded-2xl overflow-hidden shadow-card hover:shadow-lift transition-all duration-500 h-full">
+                <div className="relative rounded-lg overflow-hidden border border-dark/10 shadow-sm hover:shadow-md hover:border-dark/20 transition-all duration-500 h-full">
                   <div className="aspect-[16/10] overflow-hidden">
-                    <img src={season.image} alt={t(season.titleKey)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src={season.image} alt={t(season.titleKey)} className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent"></div>
                   <div className="absolute top-6 left-6">
-                    <div className="w-14 h-14 rounded-full bg-primary/85 backdrop-blur-sm ring-1 ring-white/25 flex items-center justify-center shadow-lift">
-                      <Icon className="w-7 h-7 text-accent" />
+                    <div className="w-12 h-12 rounded-lg bg-primary/80 border border-white/20 flex items-center justify-center shadow-sm">
+                      <Icon className="w-6 h-6 text-accent" />
                     </div>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-8 text-white">

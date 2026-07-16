@@ -31,19 +31,19 @@ export function CuratedCollection() {
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <div className="rounded-2xl overflow-hidden shadow-lift h-64">
-                <img src="/images/tours/charm-of-southern-coast/hero.avif" alt="Galle Fort coastline" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div className="rounded-lg overflow-hidden border border-white/20 shadow-sm h-64 hover:border-white/40 transition-all duration-300">
+                <img src="/images/tours/charm-of-southern-coast/hero.avif" alt="Galle Fort coastline" className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700" />
               </div>
-              <div className="rounded-2xl overflow-hidden shadow-lift h-80">
-                <img src="/images/tours/the-last-kingdom/gallery-3.jpg" alt="Peradeniya Botanical Garden" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div className="rounded-lg overflow-hidden border border-white/20 shadow-sm h-80 hover:border-white/40 transition-all duration-300">
+                <img src="/images/tours/the-last-kingdom/gallery-3.jpg" alt="Peradeniya Botanical Garden" className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700" />
               </div>
             </div>
             <div className="space-y-4 pt-12">
-              <div className="rounded-2xl overflow-hidden shadow-lift h-80">
-                <img src="/images/tours/yala-safari/hero.jpg" alt="Yala safari" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div className="rounded-lg overflow-hidden border border-white/20 shadow-sm h-80 hover:border-white/40 transition-all duration-300">
+                <img src="/images/tours/yala-safari/hero.jpg" alt="Yala safari" className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700" />
               </div>
-              <div className="rounded-2xl overflow-hidden shadow-lift h-64">
-                <img src="/images/tours/the-last-kingdom/gallery-4.jpg" alt="Ayurvedic garden" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div className="rounded-lg overflow-hidden border border-white/20 shadow-sm h-64 hover:border-white/40 transition-all duration-300">
+                <img src="/images/tours/the-last-kingdom/gallery-4.jpg" alt="Ayurvedic garden" className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700" />
               </div>
             </div>
           </motion.div>

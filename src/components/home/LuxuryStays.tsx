@@ -25,9 +25,9 @@ export function LuxuryStays() {
         <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide lg:hidden px-4 md:px-8">
           {hotels.map((hotel) => (
             <div key={hotel.id} className="snap-start shrink-0 w-56">
-              <div className="relative rounded-2xl overflow-hidden shadow-card h-72">
-                <img src={hotel.image} alt={hotel.name} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
+              <div className="relative rounded-lg overflow-hidden border border-dark/10 shadow-sm h-72">
+                <img src={hotel.image} alt={hotel.name} className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent"></div>
                 <div className="absolute top-3 right-3 flex gap-0.5">
                   {[...Array(hotel.rating)].map((_, i) => <Star key={i} className="w-3 h-3 fill-accent text-accent" />)}
                 </div>
@@ -45,11 +45,11 @@ export function LuxuryStays() {
         <div className="hidden lg:grid grid-cols-4 gap-6 container mx-auto px-8">
           {hotels.map((hotel, index) => (
             <motion.div key={hotel.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
-              <div className="relative rounded-2xl overflow-hidden shadow-card hover:shadow-lift transition-all duration-500">
+              <div className="relative rounded-lg overflow-hidden border border-dark/10 shadow-sm hover:shadow-md hover:border-dark/20 transition-all duration-500">
                 <div className="aspect-[3/4] overflow-hidden">
-                  <img src={hotel.image} alt={hotel.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src={hotel.image} alt={hotel.name} className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent"></div>
                 <div className="absolute top-4 right-4 flex gap-1">
                   {[...Array(hotel.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
                 </div>

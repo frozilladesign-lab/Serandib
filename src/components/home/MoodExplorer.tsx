@@ -30,13 +30,12 @@ export function MoodExplorer() {
             const Icon = mood.icon;
             return (
               <motion.div key={mood.id} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.05 }}>
-                <Link to={`/tours/category/${mood.category}`} className="group block relative rounded-2xl overflow-hidden shadow-card hover:shadow-lift transition-all duration-500 aspect-square">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${mood.color} opacity-90 group-hover:opacity-100 transition-opacity`}></div>
+                <Link to={`/tours/category/${mood.category}`} className="group block relative rounded-lg overflow-hidden border border-primary/15 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-500 aspect-square">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${mood.color} opacity-85 group-hover:opacity-95 transition-opacity`}></div>
                   <div className="relative h-full flex flex-col items-center justify-center p-6 text-white">
-                    <Icon className="w-11 h-11 md:w-14 md:h-14 mb-4 text-accent group-hover:scale-110 transition-transform duration-300" />
-                    <h3 className="font-heading text-xl md:text-2xl font-semibold text-center">{t(mood.labelKey)}</h3>
+                    <Icon className="w-10 h-10 md:w-12 md:h-12 mb-3 text-accent/90 group-hover:scale-105 transition-transform duration-300" />
+                    <h3 className="font-heading text-lg md:text-xl font-semibold text-center">{t(mood.labelKey)}</h3>
                   </div>
-                  <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300"></div>
                 </Link>
               </motion.div>
             );

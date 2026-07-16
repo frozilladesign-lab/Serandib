@@ -24,9 +24,9 @@ export function SignatureExperiences() {
         <div className="grid grid-cols-2 gap-4 lg:hidden">
           {experiences.map((exp, index) => (
             <motion.div key={exp.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.08 }}>
-              <Link to={exp.link} className="block relative rounded-2xl overflow-hidden shadow-card h-48 sm:h-64">
-                <img src={exp.image} alt={t(exp.titleKey)} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/30 to-transparent"></div>
+              <Link to={exp.link} className="block relative rounded-lg overflow-hidden border border-dark/10 shadow-sm h-48 sm:h-64">
+                <img src={exp.image} alt={t(exp.titleKey)} className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                   <p className="text-accent text-xs font-semibold mb-1 tracking-luxury uppercase">{t(exp.subtitleKey)}</p>
                   <h3 className="font-heading text-base md:text-xl font-semibold leading-tight">{t(exp.titleKey)}</h3>
@@ -42,9 +42,9 @@ export function SignatureExperiences() {
             <motion.div key={exp.id} initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }}
               className="absolute group" style={{ left: `${index * 18}%`, top: `${index * 8}%`, zIndex: experiences.length - index }}>
               <Link to={exp.link}>
-                <div className="w-[360px] h-[500px] rounded-2xl overflow-hidden shadow-lift hover:shadow-glass-strong transition-all duration-500 hover:-translate-y-2 hover:scale-105">
-                  <img src={exp.image} alt={t(exp.titleKey)} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
+                <div className="w-[360px] h-[500px] rounded-lg overflow-hidden border border-dark/10 shadow-sm hover:shadow-md transition-all duration-500 hover:border-dark/20">
+                  <img src={exp.image} alt={t(exp.titleKey)} className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <p className="text-accent text-sm font-semibold mb-2 tracking-luxury uppercase">{t(exp.subtitleKey)}</p>
                     <h3 className="font-heading text-3xl font-semibold">{t(exp.titleKey)}</h3>

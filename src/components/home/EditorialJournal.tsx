@@ -24,16 +24,16 @@ export function EditorialJournal() {
         <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide lg:hidden px-4 md:px-8">
           {articles.map((article) => (
             <Link key={article.id} to="/travel-guide" className="snap-start shrink-0 w-[75vw] max-w-xs block">
-              <div className="bg-white rounded-2xl overflow-hidden shadow-card">
+              <div className="bg-white rounded-lg overflow-hidden border border-primary/10 shadow-sm">
                 <div className="h-40 overflow-hidden">
                   <img src={article.image} alt={t(article.titleKey)} className="w-full h-full object-cover" />
                 </div>
-                <div className="p-4">
-                  <div className="flex items-center gap-2 mb-2 text-xs">
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-3 text-xs">
                     <span className="text-accent font-semibold tracking-luxury uppercase">{t(article.categoryKey)}</span>
                     <span className="text-muted flex items-center gap-1"><Clock className="w-3 h-3" />{t(article.timeKey)}</span>
                   </div>
-                  <h3 className="font-heading text-base font-semibold text-primary mb-1 line-clamp-2">{t(article.titleKey)}</h3>
+                  <h3 className="font-heading text-base font-semibold text-primary mb-2 line-clamp-2">{t(article.titleKey)}</h3>
                   <p className="text-muted text-xs leading-relaxed line-clamp-2">{t(article.excerptKey)}</p>
                 </div>
               </div>
@@ -46,11 +46,11 @@ export function EditorialJournal() {
           {articles.map((article, index) => (
             <motion.article key={article.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
               <Link to="/travel-guide" className="block">
-                <div className="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-lift transition-all duration-500">
+                <div className="bg-white rounded-lg overflow-hidden border border-primary/10 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-500">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={article.image} alt={t(article.titleKey)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src={article.image} alt={t(article.titleKey)} className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700" />
                   </div>
-                  <div className="p-8">
+                  <div className="p-7">
                     <div className="flex items-center gap-3 mb-4 text-sm">
                       <span className="text-accent font-semibold tracking-luxury uppercase">{t(article.categoryKey)}</span>
                       <span className="text-muted flex items-center gap-1"><Clock className="w-4 h-4" />{t(article.timeKey)}</span>
