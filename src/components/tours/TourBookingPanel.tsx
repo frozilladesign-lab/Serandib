@@ -57,8 +57,8 @@ export function TourBookingPanel({ price, tourName, durationDays }: Props) {
   };
   return (
     <>
-      {/* Desktop Sticky Sidebar */}
-      <div className="hidden lg:block sticky top-32 bg-white rounded-3xl shadow-subtle border border-primary/5 overflow-hidden">
+      {/* Inquiry panel — sticky sidebar on desktop, inline card on mobile */}
+      <div id="tour-inquiry" className="block lg:sticky lg:top-32 bg-white rounded-3xl shadow-subtle border border-primary/5 overflow-hidden mb-24 lg:mb-0">
         <div className="bg-[#1D514E] p-8 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-geometric-motif opacity-10"></div>
           <div className="relative z-10">
@@ -218,7 +218,7 @@ export function TourBookingPanel({ price, tourName, durationDays }: Props) {
           </div>
         </div>
         <button
-          onClick={handleWhatsApp}
+          onClick={() => document.getElementById('tour-inquiry')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
           className="px-8 py-3.5 bg-primary text-white rounded-full font-medium flex items-center gap-2">
           <MessageCircleIcon className="w-5 h-5" /> Inquire Now
         </button>
