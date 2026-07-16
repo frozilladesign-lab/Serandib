@@ -71,6 +71,40 @@ const PEARL_HERO = '/images/tours/pearl-of-sri-lanka/hero.jpg';
 const WONDER_HERO = '/images/tours/wonder-of-sri-lanka/hero.jpg';
 const FISHING_HERO = '/images/tours/ocean-fishing/hero.jpg';
 const FISHING_G1 = '/images/tours/ocean-fishing/gallery-1.jpg';
+const YALA_G1 = '/images/tours/yala-safari/gallery-1.jpg';
+const YALA_G2 = '/images/tours/yala-safari/gallery-2.jpg';
+const YALA_G3 = '/images/tours/yala-safari/gallery-3.jpg';
+const SINHARAJA_HERO = '/images/tours/sinharaja-rainforest/hero.jpg';
+const SINHARAJA_G1 = '/images/tours/sinharaja-rainforest/gallery-1.jpg';
+const MAJESTIC_HERO = '/images/tours/majestic-island/hero.jpg';
+const MAJESTIC_G1 = '/images/tours/majestic-island/gallery-1.jpg';
+const MAJESTIC_G2 = '/images/tours/majestic-island/gallery-2.jpg';
+const MAJESTIC_G3 = '/images/tours/majestic-island/gallery-3.jpg';
+const MAJESTIC_G4 = '/images/tours/majestic-island/gallery-4.jpg';
+const MAJESTIC_G5 = '/images/tours/majestic-island/gallery-5.jpg';
+const PEARL_G1 = '/images/tours/pearl-of-sri-lanka/gallery-1.jpg';
+const PEARL_G2 = '/images/tours/pearl-of-sri-lanka/gallery-2.jpg';
+const PEARL_G3 = '/images/tours/pearl-of-sri-lanka/gallery-3.jpg';
+const PEARL_G4 = '/images/tours/pearl-of-sri-lanka/gallery-4.jpg';
+const PEARL_G5 = '/images/tours/pearl-of-sri-lanka/gallery-5.jpg';
+const WONDER_G1 = '/images/tours/wonder-of-sri-lanka/gallery-1.jpg';
+const WONDER_G2 = '/images/tours/wonder-of-sri-lanka/gallery-2.jpg';
+const WONDER_G3 = '/images/tours/wonder-of-sri-lanka/gallery-3.jpg';
+const WONDER_G4 = '/images/tours/wonder-of-sri-lanka/gallery-4.jpg';
+const CHARM_G1 = '/images/tours/charm-of-southern-coast/gallery-1.jpg';
+const CHARM_G2 = '/images/tours/charm-of-southern-coast/gallery-2.jpeg';
+const CHARM_G3 = '/images/tours/charm-of-southern-coast/gallery-3.avif';
+const COLOMBO_G1 = '/images/tours/colombo-city-tour/gallery-1.jpg';
+const COLOMBO_G2 = '/images/tours/colombo-city-tour/gallery-2.jpg';
+const COLOMBO_G3 = '/images/tours/colombo-city-tour/gallery-3.jpg';
+const COLOMBO_G4 = '/images/tours/colombo-city-tour/gallery-4.jpeg';
+const YALA_GALLERY = [YALA_HERO, YALA_G1, YALA_G2, YALA_G3];
+const SINHARAJA_GALLERY = [SINHARAJA_HERO, SINHARAJA_G1];
+const MAJESTIC_GALLERY = [MAJESTIC_HERO, MAJESTIC_G1, MAJESTIC_G2, MAJESTIC_G3, MAJESTIC_G4, MAJESTIC_G5];
+const PEARL_GALLERY = [PEARL_HERO, PEARL_G1, PEARL_G2, PEARL_G3, PEARL_G4, PEARL_G5];
+const WONDER_GALLERY = [WONDER_HERO, WONDER_G1, WONDER_G2, WONDER_G3, WONDER_G4];
+const CHARM_GALLERY = [GALLE_HERO, CHARM_G1, CHARM_G2, CHARM_G3];
+const COLOMBO_GALLERY = [COLOMBO_HERO, COLOMBO_G1, COLOMBO_G2, COLOMBO_G3, COLOMBO_G4];
 const DEFAULT_HERO = COLOMBO_HERO;
 const DEFAULT_GALLERY = [COLOMBO_HERO, GALLE_HERO, YALA_HERO];
 
@@ -334,8 +368,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: YALA_HERO,
+  galleryImages: YALA_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Wildlife', 'Adventure'],
   shortDescription:
@@ -386,8 +420,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: MAJESTIC_HERO,
+  galleryImages: MAJESTIC_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Wildlife', 'Beach'],
   shortDescription:
@@ -434,8 +468,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: PEARL_HERO,
+  galleryImages: PEARL_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Family'],
   shortDescription:
@@ -477,8 +511,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: SINHARAJA_HERO,
+  galleryImages: SINHARAJA_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Wildlife', 'Adventure'],
   shortDescription:
@@ -521,8 +555,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: YALA_HERO,
+  galleryImages: YALA_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Wildlife', 'Adventure'],
   shortDescription:
@@ -564,8 +598,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: YALA_HERO,
+  galleryImages: YALA_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Wildlife'],
   shortDescription:
@@ -604,8 +638,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: MISTY_YALA_HERO,
+  galleryImages: YALA_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Wildlife', 'Family'],
   shortDescription:
@@ -651,8 +685,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: MAJESTIC_HERO,
+  galleryImages: MAJESTIC_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Honeymoon', 'Beach'],
   shortDescription:
@@ -694,8 +728,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: WONDER_HERO,
+  galleryImages: WONDER_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Family', 'Cultural'],
   shortDescription:
@@ -734,8 +768,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: MAJESTIC_HERO,
+  galleryImages: MAJESTIC_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Honeymoon', 'Luxury'],
   shortDescription:
@@ -774,8 +808,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: COLOMBO_HERO,
+  galleryImages: COLOMBO_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Family'],
   shortDescription:
@@ -814,8 +848,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: COLOMBO_HERO,
+  galleryImages: COLOMBO_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural'],
   shortDescription:
@@ -855,8 +889,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: WONDER_HERO,
+  galleryImages: WONDER_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Beach'],
   shortDescription:
@@ -902,8 +936,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: WONDER_HERO,
+  galleryImages: WONDER_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Beach'],
   shortDescription:
@@ -947,8 +981,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: PEARL_HERO,
+  galleryImages: PEARL_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Beach'],
   shortDescription:
@@ -990,8 +1024,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: GALLE_HERO,
+  galleryImages: CHARM_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Beach'],
   shortDescription:
@@ -1033,8 +1067,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: COLOMBO_HERO,
+  galleryImages: COLOMBO_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Beach'],
   shortDescription:
@@ -1070,8 +1104,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: COLOMBO_HERO,
+  galleryImages: COLOMBO_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural'],
   shortDescription:
@@ -1103,8 +1137,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: YALA_HERO,
+  galleryImages: YALA_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Adventure'],
   shortDescription:
@@ -1142,8 +1176,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: PEARL_HERO,
+  galleryImages: PEARL_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Beach'],
   shortDescription:
@@ -1185,8 +1219,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: GALLE_HERO,
+  galleryImages: CHARM_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Beach'],
   shortDescription:
@@ -1228,8 +1262,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: COLOMBO_HERO,
+  galleryImages: COLOMBO_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Beach'],
   shortDescription:
@@ -1265,8 +1299,8 @@ export const tours: Tour[] = [
   price: 0,
   rating: 5,
   reviewCount: 0,
-  heroImage: DEFAULT_HERO,
-  galleryImages: DEFAULT_GALLERY,
+  heroImage: COLOMBO_HERO,
+  galleryImages: COLOMBO_GALLERY,
   region: 'Multiple Regions',
   activityTags: ['Cultural'],
   shortDescription:
@@ -1291,6 +1325,128 @@ export const tours: Tour[] = [
   hotels: [],
 },
 ];
+
+// Improved auto-fill for itinerary images: prefer specific place images, then tour gallery, then hero.
+// External image URLs (Dia Lanka) mapped to location keywords. These are used
+// preferentially when available to provide accurate per-day photos.
+const EXTERNAL_IMAGE_MAP: Array<[RegExp, string[]]> = [
+  [/\bcolombo\b/i, ['https://dialankatravels.com/wp-content/uploads/2026/02/colombo-sklyine-4-Colombo-374x226.jpg']],
+  [/\bnegombo\b/i, ['https://dialankatravels.com/wp-content/uploads/2026/02/negombo_katamaran_mytravelpartner-374x226.jpg']],
+  [/\bsigiriya\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/08/sigiriya-374x226.webp','https://dialankatravels.com/wp-content/uploads/2024/02/Dia-Sigiriya-UAE-Campagin-374x226.jpeg']],
+  [/\bpidurangala\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/02/Package-04-01-Dia-Lanka-374x226.jpg']],
+  [/\bdambulla\b/i, ['https://dialankatravels.com/wp-content/uploads/2026/02/dambulla-cave-temple-374x226.jpg']],
+  [/\bpolonnaruwa\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/02/Package-06-05-Dia-Lanka-374x226.jpg']],
+  [/\bkandy\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/08/Kandy-City-374x226.jpg']],
+  [/\bnuwara eliya\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/02/Dia-Nuwara-Eliya-UAE-Campagin-374x226.jpeg']],
+  [/\bella\b/i, ['https://dialankatravels.com/wp-content/uploads/2026/02/Ella-Mountains-374x226.jpg']],
+  [/\btrain\b|\bnanu oya\b/i, ['https://dialankatravels.com/wp-content/uploads/2026/02/Kandy-to-the-Hill-Country-by-train-header-374x226.jpg']],
+  [/\byala\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/08/Leopard-srilanka-Getty-374x226.jpg']],
+  [/\budawalawe\b/i, ['https://dialankatravels.com/wp-content/uploads/2026/02/3187_2412_SriLanka4e-1-374x226.jpg']],
+  [/\bminneriya\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/02/elepe-374x226.jpeg']],
+  [/\bwilpattu\b/i, ['https://dialankatravels.com/wp-content/uploads/2025/02/wildlife-sanctuaries-around-the-world-leopard-image-374x226.jpg']],
+  [/\bgalle\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/02/1-374x226.webp','https://dialankatravels.com/wp-content/uploads/2024/08/galle-feat-2-374x226.jpg']],
+  [/\bmirissa\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/02/Dia-Mirissa-Whale-Watching-UAE-Campagin-374x226.jpeg']],
+  [/\bbentota\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/02/Package-04-05-Dia-Lanka-374x226.jpg']],
+  [/\bkitulgala\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/02/eyftyvfa2de3u82c131hoqvmc6mg_1596629544_shutterstock_1114604351-374x226.webp']],
+  [/\bsinharaja\b/i, ['https://dialankatravels.com/wp-content/uploads/2026/02/bd34d204063d924bbf32ca29e9fb0d62-374x226.jpg']],
+  [/\btrincomalee\b/i, ['https://dialankatravels.com/wp-content/uploads/2026/02/Pasikuda-Beach-village--374x226.jpg']],
+  [/\bpinnawala\b/i, ['https://dialankatravels.com/wp-content/uploads/2025/02/23985-374x226.jpg']],
+  [/\bhikkaduwa\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/02/Mirissa-3-374x226.jpeg']],
+  [/\bunawatuna\b|\bdalawella\b/i, ['https://dialankatravels.com/wp-content/uploads/2024/08/WoC-Top-Beaches-Around-Galle-Dalawella-374x226.png']],
+];
+
+// Auto-fill missing itinerary images with suitable local images based on keywords.
+const ITINERARY_IMAGE_MAP: Array<[RegExp, string[]]> = [
+  [/\bgalle\b/i, [GALLE_HERO, CHARM_G1, CHARM_G2]],
+  [/\bmirissa\b/i, [GALLE_HERO, GALLE_HERO]],
+  [/\byala\b/i, [YALA_HERO, ...YALA_GALLERY]],
+  [/\bella\b/i, [MISTY_HERO, MISTY_G1, MISTY_G2]],
+  [/\bnine arch\b/i, [MISTY_G1, MISTY_HERO]],
+  [/\bnuwara eliya\b/i, [MISTY_HERO, MISTY_G2]],
+  [/\bkandy\b/i, [PEARL_HERO, PEARL_G1]],
+  [/\bsigiriya\b/i, [KINGDOM_HERO, KINGDOM_G2]],
+  [/\bdambulla\b/i, [KINGDOM_G2, KINGDOM_G3 || KINGDOM_G1]],
+  [/\btrincomalee\b/i, [WHALE_HERO, WHALE_G1]],
+  [/\bwhale\b/i, [WHALE_HERO, WHALE_G1]],
+  [/\bnegombo\b/i, [FISHING_HERO, FISHING_G1]],
+  [/\bpolonnaruwa\b/i, [PEARL_HERO]],
+  [/\budawalawe\b/i, [YALA_HERO]],
+  [/\bwilpattu\b/i, [YALA_HERO]],
+  [/\bminneriya\b/i, [YALA_HERO]],
+  [/\bpinnawala\b/i, [PEARL_HERO]],
+  [/\bhikkaduwa\b/i, [GALLE_HERO]],
+  [/\bbentota\b/i, [GALLE_HERO]],
+  [/\bkitulgala\b/i, [PEARL_HERO]],
+  [/\bravana\b/i, [MISTY_HERO]],
+  [/\bmadu river\b/i, [GALLE_HERO]],
+];
+
+function chooseItineraryImage(dayTitle: string, dayDesc: string, tour?: Tour) {
+  const text = `${dayTitle} ${dayDesc}`;
+
+  // Prefer external Dia Lanka images when a keyword matches.
+  for (const [pattern, imgs] of EXTERNAL_IMAGE_MAP) {
+    if (pattern.test(text) && imgs && imgs.length) return imgs[0];
+  }
+
+  // Then prefer local matching images.
+  for (const [pattern, imgs] of ITINERARY_IMAGE_MAP) {
+    if (pattern.test(text)) {
+      if (imgs && imgs.length) return imgs[0];
+    }
+  }
+
+  // If no match, prefer the tour's gallery first, then hero, then default.
+  if (tour) {
+    if (Array.isArray(tour.galleryImages) && tour.galleryImages.length) return tour.galleryImages[0];
+    if (tour.heroImage) return tour.heroImage;
+  }
+
+  return DEFAULT_HERO;
+}
+
+for (const t of tours) {
+  if (Array.isArray(t.itinerary)) {
+    t.itinerary = t.itinerary.map((d) => ({
+      ...d,
+      image: d.image && d.image !== DEFAULT_HERO ? d.image : chooseItineraryImage(d.title, d.description, t),
+    }));
+  }
+}
+
+// Prioritize external URL images for tour hero and gallery images.
+function assignExternalAssetsToTours() {
+  for (const t of tours) {
+    const searchText = `${t.title} ${t.shortDescription} ${t.highlights?.join(' ') || ''} ${t.region}`;
+    const matches: string[] = [];
+
+    for (const [pattern, imgs] of EXTERNAL_IMAGE_MAP) {
+      if (pattern.test(searchText)) {
+        for (const u of imgs) {
+          if (!matches.includes(u)) matches.push(u);
+        }
+      }
+    }
+
+    if (matches.length) {
+      // Set hero to the first external match
+      t.heroImage = matches[0];
+      // Prepend external matches to gallery, keep unique, limit to 8 images
+      const gallery = [...matches, ...(Array.isArray(t.galleryImages) ? t.galleryImages : [])];
+      t.galleryImages = Array.from(new Set(gallery)).slice(0, 8);
+    } else {
+      // No external match; ensure hero/gallery are non-empty and sensible
+      if ((!t.heroImage || t.heroImage === DEFAULT_HERO) && Array.isArray(t.galleryImages) && t.galleryImages.length) {
+        t.heroImage = t.galleryImages[0];
+      }
+      if (!Array.isArray(t.galleryImages) || t.galleryImages.length === 0) {
+        t.galleryImages = [t.heroImage || DEFAULT_HERO];
+      }
+    }
+  }
+}
+
+assignExternalAssetsToTours();
 
 export function getTourBySlug(slug: string): Tour | undefined {
   return tours.find((t) => t.slug === slug);

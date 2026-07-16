@@ -13,7 +13,7 @@ const LOCATION_COORDS: Record<string, [number, number]> = {
   Mirissa: [5.9522, 80.4505],
   Bentota: [6.4197, 79.9859],
   Hikkaduwa: [6.1430, 80.1002],
-  Trincomalee: [8.5870, 81.2152],
+  Trincomalee: [8.5870, 81.2150],
   Jaffna: [9.6615, 80.0255],
   Polonnaruwa: [7.9408, 81.0000],
   Dambulla: [7.8566, 80.6513],
@@ -25,7 +25,7 @@ const LOCATION_COORDS: Record<string, [number, number]> = {
   Yala: [6.3590, 81.3283],
   Wilpattu: [8.4667, 79.6667],
   Minneriya: [8.0000, 80.8833],
-  Kataragama: [6.7195, 81.3308],
+  Kataragama: [6.7195, 81.3303],
   Udawalawe: [6.4167, 80.9333],
   Anuradhapura: [8.3114, 80.4037],
   Pinnawala: [7.2930, 80.5078],
@@ -35,39 +35,63 @@ const LOCATION_COORDS: Record<string, [number, number]> = {
   Habarana: [7.5167, 80.7714],
 };
 
-function extractLocationsFromTitle(title: string) {
-  const keys = Object.keys(LOCATION_COORDS);
-  const found: string[] = [];
-  const titleLower = title.toLowerCase();
+const LOCATION_KEYWORDS: Array<[string, RegExp]> = [
+  ['Airport', /\bairport\b/i],
+  ['Negombo', /\bnegombo\b/i],
+  ['Colombo', /\bcolombo\b/i],
+  ['Galle', /\bgalle\b/i],
+  ['Mirissa', /\bmirissa\b/i],
+  ['Bentota', /\bbentota\b/i],
+  ['Hikkaduwa', /\bhikkaduwa\b/i],
+  ['Trincomalee', /\btrincomalee\b/i],
+  ['Jaffna', /\bjaffna\b/i],
+  ['Polonnaruwa', /\bpolonnaruwa\b/i],
+  ['Dambulla', /\bdambulla\b/i],
+  ['Sigiriya', /\bsigiriya\b|\bpidurangala\b/i],
+  ['Kandy', /\bkandy\b|\bpinnawala\b/i],
+  ['Nuwara Eliya', /\bnuwara eliya\b|\bnanu oya\b/i],
+  ['Hatton', /\bhatton\b/i],
+  ['Ella', /\bella\b|\bnine arch\b|\blittle adam/i],
+  ['Yala', /\byala\b/i],
+  ['Wilpattu', /\bwilpattu\b/i],
+  ['Minneriya', /\bminneriya\b/i],
+  ['Kataragama', /\bkataragama\b/i],
+  ['Udawalawe', /\budawalawe\b/i],
+  ['Anuradhapura', /\banuradhapura\b/i],
+  ['Kitulgala', /\bkitulgala\b/i],
+  ['Habarana', /\bhabarana\b/i],
+];
 
-  for (const key of keys) {
-    const regex = new RegExp(`\\b${key.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')}\\b`, 'i');
-    if (regex.test(titleLower)) {
-      found.push(key);
+function extractLocationsFromText(text: string) {
+  const found: string[] = [];
+
+  for (const [location, pattern] of LOCATION_KEYWORDS) {
+    if (pattern.test(text) && !found.includes(location)) {
+      found.push(location);
     }
   }
 
-  if (found.length) {
-    return found;
-  }
-
-  if (/airport/i.test(title)) {
+  if (!found.length && /airport/i.test(text)) {
     return ['Airport'];
   }
 
-  return [];
+  return found;
 }
 
 function buildRouteFromItinerary(itinerary: Tour['itinerary']) {
   const stops: string[] = [];
+
   itinerary.forEach((day) => {
-    const locations = extractLocationsFromTitle(day.title);
+    const candidateText = `${day.title} ${day.description}`;
+    const locations = extractLocationsFromText(candidateText);
+
     locations.forEach((location) => {
       if (stops[stops.length - 1] !== location) {
         stops.push(location);
       }
     });
   });
+
   return stops
     .map((name) => LOCATION_COORDS[name])
     .filter((coord): coord is [number, number] => Boolean(coord));
@@ -90,18 +114,22 @@ export function TourMap({ tour }: Props) {
       <div className="h-[450px] w-full rounded-lg overflow-hidden shadow-sm border border-primary/10 hover:shadow-md hover:border-primary/20 transition-all duration-300 relative z-0">
         <MapContainer
           center={mapCenter}
-          zoom={7}
+          zoom={route.length > 1 ? 7 : 8}
+          bounds={route.length > 1 ? route : undefined}
+          boundsOptions={{ padding: [40, 40] }}
           scrollWheelZoom={false}
           className="h-full w-full">
           <TileLayer
             attribution="&copy; OpenStreetMap"
             url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png" />
-          <Polyline
-            positions={route.length > 0 ? route : [fallbackBasePos]}
-            color="#2B7772"
-            weight={3}
-            opacity={0.7}
-            dashArray="10, 10" />
+          {route.length > 1 && (
+            <Polyline
+              positions={route}
+              color="#2B7772"
+              weight={3}
+              opacity={0.7}
+              dashArray="10, 10" />
+          )}
           {route.map((pos, idx) => (
             <Marker key={idx} position={pos}>
               <Popup>
