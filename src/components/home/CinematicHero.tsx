@@ -27,7 +27,7 @@ export function CinematicHero() {
             className="inline-block py-2 px-4 rounded-full glass-panel-dark text-white text-sm font-medium tracking-luxury uppercase mb-8">
             {t('heroTag')}
           </motion.span>
-          <h1 className="font-heading text-3xl sm:text-4xl md:text-display font-semibold text-white leading-[1.15] mb-6 text-balance tracking-tight">
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-display font-semibold text-white mb-6 text-balance tracking-tight">
             {t('heroHeading')}
           </h1>
           <p className="text-base md:text-xl text-white/95 mb-10 max-w-3xl mx-auto font-light leading-relaxed text-balance">

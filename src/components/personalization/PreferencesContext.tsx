@@ -46,7 +46,7 @@ const translations: Record<LanguageCode, Record<string, string>> = {
 
     // ── Welcome modal ──
     welcomeTitle: 'Welcome to Serandib Journeys',
-    welcomeSubtitle: 'Choose your currency and language to get started',
+    welcomeSubtitle: 'Choose your currency to get started',
     selectCurrency: 'Select your currency',
     selectLanguage: 'Select your language',
     continue: 'Continue',

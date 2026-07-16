@@ -34,7 +34,6 @@ export function Footer() {
   const socials = [
     { href: 'https://www.instagram.com/serandib_tours?igsh=andvNTJzYmpxcW1t', Icon: InstagramIcon, label: 'Instagram' },
     { href: 'https://www.facebook.com/share/18de3Kkjz2/?mibextid=wwXIfr', Icon: FacebookIcon, label: 'Facebook' },
-    { href: 'https://www.tiktok.com/@serandibtours?_r=1&_t=ZS-984C8xk5i4I', Icon: InstagramIcon, label: 'TikTok' },
   ];
 
   const LinkColumn = ({ title, links }: { title: string; links: { to: string; label: string }[] }) => (
@@ -106,7 +105,7 @@ export function Footer() {
                 </a>
               ))}
               <a
-                href="https://www.tiktok.com/@serandibjourneys"
+                href="https://www.tiktok.com/@serandibtours"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"

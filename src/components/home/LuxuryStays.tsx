@@ -9,7 +9,7 @@ export function LuxuryStays() {
   const { t } = usePreferences();
   const hotels = [
     { id: 1, name: 'Amanwella', location: 'Tangalle', categoryKey: 'staysBeachResort', image: '/images/tours/charm-of-southern-coast/hero.avif', rating: 5 },
-    { id: 2, name: 'Ceylon Tea Trails', location: 'Hatton', categoryKey: 'staysHeritageBungalow', image: '/images/tours/the-last-kingdom/gallery-3.jpg', rating: 5 },
+    { id: 2, name: 'Ceylon Tea Trails', location: 'Hatton', categoryKey: 'staysHeritageBungalow', image: '/images/places/nuwara-eliya.jpg', rating: 5 },
     { id: 3, name: 'Wild Coast Tented Lodge', location: 'Yala', categoryKey: 'staysSafariLodge', image: '/images/tours/yala-safari/hero.jpg', rating: 5 },
     { id: 4, name: 'Ulagalla by Uga Escapes', location: 'Anuradhapura', categoryKey: 'staysBoutiqueResort', image: '/images/tours/wonder-of-sri-lanka/hero.jpg', rating: 5 },
   ];

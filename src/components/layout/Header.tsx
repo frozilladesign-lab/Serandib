@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
-  MenuIcon, XIcon, GlobeIcon, ChevronDownIcon, ChevronRightIcon,
+  MenuIcon, XIcon, ChevronDownIcon, ChevronRightIcon,
   HomeIcon, MapIcon, CompassIcon, StarIcon, CalendarIcon, TagIcon,
   BedDoubleIcon, BookOpenIcon, InfoIcon, MessageCircleIcon, HelpCircleIcon,
   InstagramIcon, FacebookIcon
@@ -10,26 +10,21 @@ import { cn } from '../../lib/utils';
 import {
   usePreferences,
   CURRENCIES,
-  LANGUAGES,
-  CurrencyCode,
-  LanguageCode
+  CurrencyCode
 } from '../personalization/PreferencesContext';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCurrencyOpen, setIsCurrencyOpen] = useState(false);
-  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const currencyRef = useRef<HTMLDivElement>(null);
-  const languageRef = useRef<HTMLDivElement>(null);
-  const { currency, setCurrency, language, setLanguage, t } = usePreferences();
+  const { currency, setCurrency, t } = usePreferences();
   const location = useLocation();
   const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (currencyRef.current && !currencyRef.current.contains(e.target as Node)) setIsCurrencyOpen(false);
-      if (languageRef.current && !languageRef.current.contains(e.target as Node)) setIsLanguageOpen(false);
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -123,24 +118,6 @@ export function Header() {
                     </div>
                   )}
                 </div>
-                {/* Language */}
-                <div className="relative" ref={languageRef}>
-                  <button onClick={() => { setIsLanguageOpen(v => !v); setIsCurrencyOpen(false); }}
-                    className="flex items-center gap-1 hover:opacity-70 transition-opacity">
-                    <GlobeIcon className="w-4 h-4" /> {language.toUpperCase()} <ChevronDownIcon className="w-3 h-3" />
-                  </button>
-                  {isLanguageOpen && (
-                    <div className="absolute top-full right-0 mt-2 w-40 bg-white rounded-xl shadow-lift border border-gray-100 py-2 z-50">
-                      {Object.values(LANGUAGES).map(l => (
-                        <button key={l.code} onClick={() => { setLanguage(l.code as LanguageCode); setIsLanguageOpen(false); }}
-                          className={cn('w-full text-left px-4 py-2 text-sm hover:bg-light transition-colors',
-                            language === l.code ? 'text-secondary font-semibold' : 'text-dark')}>
-                          {l.nativeLabel}
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
               </div>
               <Link to="/contact"
                 className={cn('px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300',
@@ -194,7 +171,7 @@ export function Header() {
           <div className="flex-1 overflow-y-auto py-4">
             {/* Main nav links */}
             <div className="px-3 mb-2">
-              <p className="text-white/40 text-xs font-semibold uppercase tracking-wider px-3 mb-2">{t('home') === 'Главная' ? 'Навигация' : 'Navigation'}</p>
+              <p className="text-white/40 text-xs font-semibold uppercase tracking-wider px-3 mb-2">Navigation</p>
               {navLinks.map((link) => {
                 const Icon = link.icon;
                 const isActive = activePath === link.path;
@@ -219,7 +196,7 @@ export function Header() {
 
             {/* More links */}
             <div className="px-3 mb-2">
-              <p className="text-white/40 text-xs font-semibold uppercase tracking-wider px-3 mb-2">{t('home') === 'Главная' ? 'Ещё' : 'More'}</p>
+              <p className="text-white/40 text-xs font-semibold uppercase tracking-wider px-3 mb-2">More</p>
               {moreLinks.map((link) => {
                 const Icon = link.icon;
                 const isActive = activePath === link.path;
@@ -242,42 +219,22 @@ export function Header() {
             {/* Divider */}
             <div className="mx-5 my-3 border-t border-white/10" />
 
-            {/* Currency & Language */}
+            {/* Currency */}
             <div className="px-5 mb-4">
-              <p className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-3">{t('currency')} & {t('language')}</p>
+              <p className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-3">{t('currency')}</p>
 
-              <div className="mb-3">
-                <p className="text-white/60 text-xs mb-2">{t('currency')}</p>
-                <div className="flex gap-2 flex-wrap">
-                  {Object.values(CURRENCIES).map(c => (
-                    <button key={c.code} onClick={() => setCurrency(c.code as CurrencyCode)}
-                      className={cn(
-                        'px-3 py-1.5 rounded-full text-sm font-medium transition-all border',
-                        currency === c.code
-                          ? 'bg-accent text-ink border-accent'
-                          : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'
-                      )}>
-                      {c.symbol} {c.code}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <p className="text-white/60 text-xs mb-2">{t('language')}</p>
-                <div className="flex gap-2">
-                  {Object.values(LANGUAGES).map(l => (
-                    <button key={l.code} onClick={() => setLanguage(l.code as LanguageCode)}
-                      className={cn(
-                        'px-4 py-1.5 rounded-full text-sm font-medium transition-all border flex-1',
-                        language === l.code
-                          ? 'bg-secondary text-white border-secondary'
-                          : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'
-                      )}>
-                      {l.nativeLabel}
-                    </button>
-                  ))}
-                </div>
+              <div className="flex gap-2 flex-wrap">
+                {Object.values(CURRENCIES).map(c => (
+                  <button key={c.code} onClick={() => setCurrency(c.code as CurrencyCode)}
+                    className={cn(
+                      'px-3 py-1.5 rounded-full text-sm font-medium transition-all border',
+                      currency === c.code
+                        ? 'bg-accent text-ink border-accent'
+                        : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20'
+                    )}>
+                    {c.symbol} {c.code}
+                  </button>
+                ))}
               </div>
             </div>
           </div>

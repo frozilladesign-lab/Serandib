@@ -52,8 +52,8 @@ export default {
         body: ['Manrope', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'display': 'clamp(3rem, 8vw, 7rem)',
-        'display-sm': 'clamp(2.5rem, 6vw, 5rem)',
+        'display': ['clamp(3rem, 8vw, 7rem)', { lineHeight: '1.05' }],
+        'display-sm': ['clamp(2.5rem, 6vw, 5rem)', { lineHeight: '1.08' }],
       },
       letterSpacing: {
         'luxury': '0.02em',

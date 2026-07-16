@@ -132,7 +132,7 @@ export function TourDetails() {
 
           {/* Sidebar */}
           <div className="lg:col-span-4">
-            <TourBookingPanel price={tour.price} />
+            <TourBookingPanel price={tour.price} tourName={tour.title} durationDays={tour.durationDays} />
           </div>
         </div>
       </div>

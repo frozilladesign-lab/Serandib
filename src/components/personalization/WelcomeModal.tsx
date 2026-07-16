@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GlobeIcon, DollarSignIcon } from 'lucide-react';
+import { DollarSignIcon } from 'lucide-react';
 import {
   usePreferences,
   CURRENCIES,
-  LANGUAGES,
-  CurrencyCode,
-  LanguageCode
+  CurrencyCode
 } from './PreferencesContext';
 
 export function WelcomeModal() {
@@ -15,20 +13,15 @@ export function WelcomeModal() {
     setHasChosenPreferences,
     currency,
     setCurrency,
-    language,
-    setLanguage,
     t
   } = usePreferences();
   const [selectedCurrency, setSelectedCurrency] =
     useState<CurrencyCode>(currency);
-  const [selectedLanguage, setSelectedLanguage] =
-    useState<LanguageCode>(language);
 
   if (hasChosenPreferences) return null;
 
   const handleContinue = () => {
     setCurrency(selectedCurrency);
-    setLanguage(selectedLanguage);
     setHasChosenPreferences(true);
   };
 
@@ -56,7 +49,7 @@ export function WelcomeModal() {
             <p className="text-dark/70 text-sm">{t('welcomeSubtitle')}</p>
           </div>
 
-          <div className="mb-6">
+          <div className="mb-8">
             <label className="flex items-center gap-2 text-sm font-semibold text-dark mb-3">
               <DollarSignIcon className="w-4 h-4 text-secondary" />
               {t('selectCurrency')}
@@ -74,28 +67,6 @@ export function WelcomeModal() {
                 >
                   <span className="text-lg font-semibold">{c.symbol}</span>
                   <span className="text-xs font-medium">{c.code}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="mb-8">
-            <label className="flex items-center gap-2 text-sm font-semibold text-dark mb-3">
-              <GlobeIcon className="w-4 h-4 text-secondary" />
-              {t('selectLanguage')}
-            </label>
-            <div className="grid grid-cols-2 gap-3">
-              {Object.values(LANGUAGES).map((l) => (
-                <button
-                  key={l.code}
-                  onClick={() => setSelectedLanguage(l.code)}
-                  className={`py-3 px-4 rounded-xl border-2 text-sm font-medium transition-all ${
-                    selectedLanguage === l.code
-                      ? 'border-secondary bg-secondary/10 text-secondary'
-                      : 'border-gray-200 text-dark/70 hover:border-gray-300'
-                  }`}
-                >
-                  {l.nativeLabel}
                 </button>
               ))}
             </div>
