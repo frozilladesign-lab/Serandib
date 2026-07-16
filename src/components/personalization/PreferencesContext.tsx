@@ -130,10 +130,10 @@ const translations: Record<LanguageCode, Record<string, string>> = {
     staysHeading: 'Accommodation',
     staysSub: 'Boutique hotels, heritage bungalows, and exclusive resorts handpicked for their exceptional service and unique character.',
     staysExploreAll: 'Explore All Accommodations',
-    staysBeachResort: 'Beach Resort',
+    staysBeachResort: 'Coastal Heritage',
     staysHeritageBungalow: 'Heritage Bungalow',
     staysSafariLodge: 'Safari Lodge',
-    staysBoutiqueResort: 'Boutique Resort',
+    staysBoutiqueResort: 'Cultural Triangle',
 
     // ── TravellerStories ──
     storiesTag: 'Guest Experiences',

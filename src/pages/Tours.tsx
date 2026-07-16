@@ -30,7 +30,6 @@ const REGIONS: Region[] = [
 export function Tours() {
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
   // Filter States
-  const [priceRange, setPriceRange] = useState<number>(5000);
   const [selectedDurations, setSelectedDurations] = useState<string[]>([]);
   const [selectedActivities, setSelectedActivities] = useState<Activity[]>([]);
   const [selectedRegions, setSelectedRegions] = useState<Region[]>([]);
@@ -61,14 +60,12 @@ export function Tours() {
     );
   };
   const clearFilters = () => {
-    setPriceRange(5000);
     setSelectedDurations([]);
     setSelectedActivities([]);
     setSelectedRegions([]);
   };
   const filteredTours = useMemo(() => {
     let result = tours.filter((tour) => {
-      if (tour.price > priceRange) return false;
       if (selectedDurations.length > 0) {
         const matchesDuration = selectedDurations.some((range) => {
           if (range === '1-5')
@@ -111,7 +108,6 @@ export function Tours() {
     }
     return result;
   }, [
-  priceRange,
   selectedDurations,
   selectedActivities,
   selectedRegions,
@@ -132,25 +128,6 @@ export function Tours() {
         
           Clear All
         </button>
-      </div>
-
-      <div>
-        <h4 className="text-sm font-semibold text-dark uppercase tracking-wider mb-4">
-          Max Budget
-        </h4>
-        <input
-        type="range"
-        min="500"
-        max="5000"
-        step="100"
-        value={priceRange}
-        onChange={(e) => setPriceRange(Number(e.target.value))}
-        className="w-full accent-primary" />
-      
-        <div className="flex justify-between text-sm text-dark/60 mt-2">
-          <span>$500</span>
-          <span className="font-medium text-primary">${priceRange}</span>
-        </div>
       </div>
 
       <div>
@@ -263,27 +240,7 @@ export function Tours() {
         {/* Top Filter Bar (Desktop) */}
         <div className="hidden lg:flex items-start gap-8 mb-12">
           <div className="w-full bg-white rounded-2xl p-8 shadow-soft border border-gray-100">
-            <div className="grid grid-cols-4 gap-8">
-              <div>
-                <h4 className="text-sm font-semibold text-dark uppercase tracking-wider mb-4">
-                  Max Budget
-                </h4>
-                <input
-                  type="range"
-                  min="500"
-                  max="5000"
-                  step="100"
-                  value={priceRange}
-                  onChange={(e) => setPriceRange(Number(e.target.value))}
-                  className="w-full accent-primary" />
-                
-                <div className="flex justify-between text-sm text-dark/60 mt-2">
-                  <span>$500</span>
-                  <span className="font-medium text-primary">
-                    ${priceRange}
-                  </span>
-                </div>
-              </div>
+            <div className="grid grid-cols-3 gap-8">
               <div>
                 <h4 className="text-sm font-semibold text-dark uppercase tracking-wider mb-4">
                   Duration

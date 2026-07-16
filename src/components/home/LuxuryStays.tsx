@@ -8,10 +8,10 @@ import { SectionHeading } from '../common/SectionHeading';
 export function LuxuryStays() {
   const { t } = usePreferences();
   const hotels = [
-    { id: 1, name: 'Amanwella', location: 'Tangalle', categoryKey: 'staysBeachResort', image: '/images/tours/charm-of-southern-coast/hero.avif', rating: 5 },
+    { id: 1, name: 'Galle Fort', location: 'Galle', categoryKey: 'staysBeachResort', image: '/images/tours/charm-of-southern-coast/hero.avif', rating: 5 },
     { id: 2, name: 'Ceylon Tea Trails', location: 'Hatton', categoryKey: 'staysHeritageBungalow', image: '/images/places/nuwara-eliya.jpg', rating: 5 },
     { id: 3, name: 'Wild Coast Tented Lodge', location: 'Yala', categoryKey: 'staysSafariLodge', image: '/images/tours/yala-safari/hero.jpg', rating: 5 },
-    { id: 4, name: 'Ulagalla by Uga Escapes', location: 'Anuradhapura', categoryKey: 'staysBoutiqueResort', image: '/images/tours/wonder-of-sri-lanka/hero.jpg', rating: 5 },
+    { id: 4, name: 'Sigiriya Rock', location: 'Sigiriya', categoryKey: 'staysBoutiqueResort', image: '/images/tours/majestic-island/hero.jpg', rating: 5 },
   ];
   return (
     <section className="py-16 md:py-24 lg:py-32 bg-white relative overflow-hidden">
