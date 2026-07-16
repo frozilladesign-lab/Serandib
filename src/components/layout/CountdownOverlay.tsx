@@ -51,11 +51,11 @@ export function CountdownOverlay() {
     <div className="countdown-overlay" role="alert" aria-live="polite">
       <div className="countdown-panel">
         <img src="/logo1.webp" alt="Serandib Journeys logo" className="countdown-logo mx-auto mb-6 h-14 w-auto object-contain" />
-        <div className="countdown-heading">Countdown ends at 6:50 AM</div>
+        <div className="countdown-heading">Welcome! We’re Launching at 6:50 AM</div>
         {finished ? (
           <>
             <div className="countdown-time countdown-time--finished">00:00</div>
-            <div className="countdown-message">Time is up — enjoy the fireworks!</div>
+            <div className="countdown-message">Our launch is live — enjoy the celebration!</div>
             <div className="fireworks-grid" aria-hidden="true">
               <span className="firework firework--one" />
               <span className="firework firework--two" />
@@ -68,7 +68,10 @@ export function CountdownOverlay() {
           <>
             <div className="countdown-time">{formatTime(remainingSeconds)}</div>
             <div className="countdown-message">
-              The site is paused until 6:50 AM. Please stay on this page.
+              We’re excited to welcome you to our brand new website. Our official launch is just moments away!
+            </div>
+            <div className="countdown-submessage">
+              Please stay on this page — the website will automatically open when the countdown ends. We look forward to welcoming you and supporting you throughout your journey.
             </div>
           </>
         )}

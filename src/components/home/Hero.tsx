@@ -59,7 +59,7 @@ export function Hero() {
               Plan My Trip
             </Link>
             <a
-              href="https://wa.me/94XXXXXXXXX"
+              href="https://wa.me/94752952852"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 bg-[#25D366] text-white rounded-full font-semibold text-lg hover:bg-[#1ebe5d] transition-all duration-300">

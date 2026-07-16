@@ -288,21 +288,21 @@ export function Header() {
               className="w-full py-3.5 bg-accent text-ink rounded-full font-semibold text-center block hover:bg-accent/90 transition-colors">
               {t('planMyTrip')}
             </Link>
-            <a href="https://wa.me/94XXXXXXXXX" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/94752952852" target="_blank" rel="noopener noreferrer"
               className="w-full py-3 bg-[#25D366] text-white rounded-full font-semibold text-center block hover:bg-[#1ebe5d] transition-colors text-sm">
               WhatsApp
             </a>
             {/* Social */}
             <div className="flex items-center justify-center gap-4 pt-2">
-              <a href="https://www.instagram.com/serandibjourneys" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/serandib_tours?igsh=andvNTJzYmpxcW1t" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
                 <InstagramIcon className="w-4 h-4" />
               </a>
-              <a href="https://www.facebook.com/serandibjourneys" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.facebook.com/share/18de3Kkjz2/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
                 <FacebookIcon className="w-4 h-4" />
               </a>
-              <a href="https://www.tiktok.com/@serandibjourneys" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.tiktok.com/@serandibtours?_r=1&_t=ZS-984C8xk5i4I" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.25 8.25 0 0 0 4.83 1.56V6.79a4.85 4.85 0 0 1-1.06-.1z"/>

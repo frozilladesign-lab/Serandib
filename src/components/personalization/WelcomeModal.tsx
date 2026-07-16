@@ -105,9 +105,7 @@ export function WelcomeModal() {
             onClick={handleContinue}
             className="w-full py-4 bg-secondary text-white rounded-full font-semibold hover:bg-primary transition-colors"
           >
-            {LANGUAGES[selectedLanguage].code === 'ru'
-              ? 'Продолжить'
-              : 'Continue'}
+            {t('continue')}
           </button>
         </motion.div>
       </motion.div>

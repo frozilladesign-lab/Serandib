@@ -32,8 +32,9 @@ export function Footer() {
   ];
 
   const socials = [
-    { href: 'https://www.instagram.com/serandibjourneys', Icon: InstagramIcon, label: 'Instagram' },
-    { href: 'https://www.facebook.com/serandibjourneys', Icon: FacebookIcon, label: 'Facebook' },
+    { href: 'https://www.instagram.com/serandib_tours?igsh=andvNTJzYmpxcW1t', Icon: InstagramIcon, label: 'Instagram' },
+    { href: 'https://www.facebook.com/share/18de3Kkjz2/?mibextid=wwXIfr', Icon: FacebookIcon, label: 'Facebook' },
+    { href: 'https://www.tiktok.com/@serandibtours?_r=1&_t=ZS-984C8xk5i4I', Icon: InstagramIcon, label: 'TikTok' },
   ];
 
   const LinkColumn = ({ title, links }: { title: string; links: { to: string; label: string }[] }) => (
@@ -142,8 +143,8 @@ export function Footer() {
             <div className="flex items-start gap-3">
               <PhoneIcon className="w-5 h-5 text-accent shrink-0 mt-0.5" />
               <div>
-                <p className="text-white/50 text-xs uppercase tracking-wider mb-1">WhatsApp</p>
-                <p className="text-sm text-white/90">+94 XX XXX XXXX</p>
+                <p className="text-white/50 text-xs uppercase tracking-wider mb-1">Contact</p>
+                <p className="text-sm text-white/90">+65 9391 0112 / +94 752 952 852</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
