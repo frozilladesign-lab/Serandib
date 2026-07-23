@@ -143,7 +143,7 @@ export function Footer() {
               <PhoneIcon className="w-5 h-5 text-accent shrink-0 mt-0.5" />
               <div>
                 <p className="text-white/50 text-xs uppercase tracking-wider mb-1">Contact</p>
-                <p className="text-sm text-white/90">+65 9391 0112 / +94 752 952 852</p>
+                <p className="text-sm text-white/90">+65 9391 0112 / +94 74 251 1185</p>
               </div>
             </div>
             <div className="flex items-start gap-3">

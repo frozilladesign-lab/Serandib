@@ -21,7 +21,7 @@ export function DestinationMap({ name, region }: Props) {
   if (name.toLowerCase().includes('sigiriya')) position = [7.957, 80.7603];else
   if (name.toLowerCase().includes('kandy')) position = [7.2906, 80.6337];else
   if (name.toLowerCase().includes('ella'))
-  position = [6.8667, 80.0489]; // Approx
+  position = [6.8667, 81.0466]; // Approx
   else if (name.toLowerCase().includes('yala')) position = [6.3683, 81.5198];else
   if (name.toLowerCase().includes('mirissa')) position = [5.9483, 80.4536];else
   if (name.toLowerCase().includes('nuwara')) position = [6.9497, 80.7828];

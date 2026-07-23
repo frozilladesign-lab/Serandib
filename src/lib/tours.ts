@@ -121,7 +121,7 @@ export const tours: Tour[] = [
   region: 'Multiple Regions',
   activityTags: ['Cultural', 'Wildlife', 'Adventure', 'Beach'],
   shortDescription:
-  'A comprehensive 14-day island journey (16–29 August 2026) — from the beaches of Negombo to Galle, a Yala leopard safari, Ella’s Nine Arch Bridge, the hill-country train, Nuwara Eliya, Kandy, Sigiriya and the East Coast beaches of Trincomalee.',
+  'A comprehensive 14-day island journey — from the beaches of Negombo to Galle, a Yala leopard safari, Ella’s Nine Arch Bridge, the hill-country train, Nuwara Eliya, Kandy, Sigiriya and the East Coast beaches of Trincomalee.',
   highlights: [
   'Madu River safari & sea turtle conservation project',
   'Galle Fort',
@@ -153,98 +153,98 @@ export const tours: Tour[] = [
     day: 1,
     title: 'Airport to Negombo',
     description:
-    '16 Aug 2026 · Airport → Negombo. Welcome pickup from the airport and transfer to Negombo. Rest after your flight and enjoy fresh seafood and the beach. Overnight in Negombo.',
+    'Airport → Negombo. Welcome pickup from the airport and transfer to Negombo. Rest after your flight and enjoy fresh seafood and the beach. Overnight in Negombo.',
     image: '/images/places/negombo.jpg',
   },
   {
     day: 2,
     title: 'Negombo to Galle',
     description:
-    '17 Aug 2026 · Negombo → Galle. Drive south with a Madu River boat safari and a sea turtle conservation project on the way, then explore the ramparts of Galle Fort in the evening. Overnight in Galle.',
+    'Negombo → Galle. Drive south with a Madu River boat safari and a sea turtle conservation project on the way, then explore the ramparts of Galle Fort in the evening. Overnight in Galle.',
     image: '/images/places/galle-fort.webp',
   },
   {
     day: 3,
     title: 'Galle to Yala',
     description:
-    '18 Aug 2026 · Galle → Yala. Continue toward Yala, stopping at Coconut Tree Hill, Weligama fish point for lunch, and the traditional stilt fishermen along the coast. Overnight near Yala.',
+    'Galle → Yala. Continue toward Yala, stopping at Coconut Tree Hill, Weligama fish point for lunch, and the traditional stilt fishermen along the coast. Overnight near Yala.',
     image: '/images/places/yala-leopard.jpg',
   },
   {
     day: 4,
     title: 'Yala Safari',
     description:
-    '19 Aug 2026 · Yala. A half-day or full-day safari in Yala National Park — the best place in Sri Lanka to spot leopards, alongside elephants, crocodiles and abundant birdlife. Overnight near Yala.',
+    'Yala. A half-day or full-day safari in Yala National Park — the best place in Sri Lanka to spot leopards, alongside elephants, crocodiles and abundant birdlife. Overnight near Yala.',
     image: '/images/places/yala-leopard.jpg',
   },
   {
     day: 5,
     title: 'Yala to Ella',
     description:
-    '20 Aug 2026 · Yala → Ella. Head into the hills to Ella, visiting Ravana Waterfall, Ravana Cave and the iconic Nine Arch Bridge, then unwind at a chilled café in the evening. Overnight in Ella.',
+    'Yala → Ella. Head into the hills to Ella, visiting Ravana Waterfall, Ravana Cave and the iconic Nine Arch Bridge, then unwind at a chilled café in the evening. Overnight in Ella.',
     image: '/images/places/ella.jpg',
   },
   {
     day: 6,
     title: 'Ella Sightseeing',
     description:
-    '21 Aug 2026 · Ella. A full day exploring Ella — hike Ella Rock and Little Adam’s Peak, try the Ravana zipline, and relax at the Ravana Pool Club. Overnight in Ella.',
+    'Ella. A full day exploring Ella — hike Ella Rock and Little Adam’s Peak, try the Ravana zipline, and relax at the Ravana Pool Club. Overnight in Ella.',
     image: '/images/places/ella.jpg',
   },
   {
     day: 7,
     title: 'Ella to Nuwara Eliya',
     description:
-    '22 Aug 2026 · Ella → Nanu Oya → Nuwara Eliya. Board the scenic morning train from Ella to Nanu Oya, then continue to Nuwara Eliya. Visit a tea plantation and enjoy water activities at Gregory Lake. Overnight in Nuwara Eliya.',
+    'Ella → Nanu Oya → Nuwara Eliya. Board the scenic morning train from Ella to Nanu Oya, then continue to Nuwara Eliya. Visit a tea plantation and enjoy water activities at Gregory Lake. Overnight in Nuwara Eliya.',
     image: '/images/places/nuwara-eliya.jpg',
   },
   {
     day: 8,
     title: 'Nuwara Eliya to Kandy',
     description:
-    '23 Aug 2026 · Nuwara Eliya → Kandy. Drive to Kandy with stops at a world-class tea factory, Ramboda Waterfall and Ambuluwawa Tower. Watch the 5:00 pm Kandy cultural dance and visit the Temple of the Sacred Tooth Relic. Overnight in Kandy.',
+    'Nuwara Eliya → Kandy. Drive to Kandy with stops at a world-class tea factory, Ramboda Waterfall and Ambuluwawa Tower. Watch the 5:00 pm Kandy cultural dance and visit the Temple of the Sacred Tooth Relic. Overnight in Kandy.',
     image: '/images/places/kandy.jpg',
   },
   {
     day: 9,
     title: 'Kandy to Sigiriya',
     description:
-    '24 Aug 2026 · Kandy → Dambulla → Sigiriya. Travel to Sigiriya via Dambulla, visiting a batik workshop, spice garden, wood carvings and the Dambulla Cave Temple. Overnight in Sigiriya.',
+    'Kandy → Dambulla → Sigiriya. Travel to Sigiriya via Dambulla, visiting a batik workshop, spice garden, wood carvings and the Dambulla Cave Temple. Overnight in Sigiriya.',
     image: '/images/places/sigiriya.webp',
   },
   {
     day: 10,
     title: 'Sigiriya Sightseeing',
     description:
-    '25 Aug 2026 · Sigiriya. Climb Pidurangala Rock at dawn, then choose an optional Habarana, Minneriya or Kawdulla safari (special for elephants) or a village safari. In the evening, enjoy a relaxing Ayurvedic spa and massage. Overnight in Sigiriya.',
+    'Sigiriya. Climb Pidurangala Rock at dawn, then choose an optional Habarana, Minneriya or Kawdulla safari (special for elephants) or a village safari. In the evening, enjoy a relaxing Ayurvedic spa and massage. Overnight in Sigiriya.',
     image: '/images/places/sigiriya.webp',
   },
   {
     day: 11,
     title: 'Sigiriya to Trincomalee',
     description:
-    '26 Aug 2026 · Sigiriya → Trincomalee. Morning visit to the Sigiriya Lion Rock fortress, then transfer to the East Coast at Trincomalee. Overnight in Trincomalee.',
+    'Sigiriya → Trincomalee. Morning visit to the Sigiriya Lion Rock fortress, then transfer to the East Coast at Trincomalee. Overnight in Trincomalee.',
     image: '/images/places/east-coast.jpg',
   },
   {
     day: 12,
     title: 'Trincomalee Activities',
     description:
-    '27 Aug 2026 · Trincomalee. Morning whale watching off Trincomalee, followed by snorkeling, scuba diving and fresh seafood by the sea. Overnight in Trincomalee.',
+    'Trincomalee. Morning whale watching off Trincomalee, followed by snorkeling, scuba diving and fresh seafood by the sea. Overnight in Trincomalee.',
     image: '/images/places/east-coast.jpg',
   },
   {
     day: 13,
     title: 'Leisure in Trincomalee',
     description:
-    '28 Aug 2026 · Trincomalee. A leisure day to relax on the beach at your own pace.',
+    'Trincomalee. A leisure day to relax on the beach at your own pace.',
     image: '/images/places/east-coast.jpg',
   },
   {
     day: 14,
     title: 'Airport Transfer & Departure',
     description:
-    '29 Aug 2026 · Trincomalee → Airport. Transfer back to the airport for your departure. End of the tour — thank you for travelling with us!',
+    'Trincomalee → Airport. Transfer back to the airport for your departure. End of the tour — thank you for travelling with us!',
     image: '/images/places/colombo.jpg',
   },
   ],

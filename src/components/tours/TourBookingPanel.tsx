@@ -9,7 +9,7 @@ import {
 import { usePreferences } from '../personalization/PreferencesContext';
 
 // Company WhatsApp number (digits only, international format, no + or spaces)
-const WHATSAPP_NUMBER = '94752952852';
+const WHATSAPP_NUMBER = '94742511185';
 
 interface Props {
   price: number;
@@ -58,8 +58,8 @@ export function TourBookingPanel({ price, tourName, durationDays }: Props) {
   return (
     <>
       {/* Inquiry panel — sticky sidebar on desktop, inline card on mobile */}
-      <div id="tour-inquiry" className="block lg:sticky lg:top-32 bg-white rounded-3xl shadow-subtle border border-primary/5 overflow-hidden mb-24 lg:mb-0">
-        <div className="bg-[#1D514E] p-8 text-white text-center relative overflow-hidden">
+      <div id="tour-inquiry" className="block lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] bg-white rounded-3xl shadow-subtle border border-primary/5 overflow-hidden lg:overflow-y-auto mb-24 lg:mb-0">
+        <div className="bg-[#1D514E] p-6 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-geometric-motif opacity-10"></div>
           <div className="relative z-10">
             <span className="text-accent text-xs font-semibold uppercase tracking-widest block mb-2">
@@ -77,7 +77,7 @@ export function TourBookingPanel({ price, tourName, durationDays }: Props) {
           </div>
         </div>
 
-        <div className="p-8">
+        <div className="p-6">
           {isSubmitted ?
           <motion.div
             initial={{
@@ -102,16 +102,7 @@ export function TourBookingPanel({ price, tourName, durationDays }: Props) {
               </p>
             </motion.div> :
 
-          <form onSubmit={handleInquirySubmit} className="space-y-5">
-              <div className="bg-light p-5 rounded-2xl border border-primary/5 mb-8 flex justify-between items-center">
-                <span className="text-dark/70 font-medium text-sm uppercase tracking-wide">
-                  Estimated Total
-                </span>
-                <span className="font-heading text-2xl font-medium text-primary">
-                  {formatPrice(price * travelers)}
-                </span>
-              </div>
-
+          <form onSubmit={handleInquirySubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-xs font-semibold text-dark/60 uppercase tracking-wider flex items-center gap-2">
@@ -154,14 +145,14 @@ export function TourBookingPanel({ price, tourName, durationDays }: Props) {
                 </div>
               </div>
 
-              <div className="space-y-4 pt-4">
+              <div className="space-y-3 pt-1">
                 <input
                 type="text"
                 required
                 placeholder="Full Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-5 py-3.5 border border-primary/10 rounded-xl text-sm outline-none focus:border-primary/30 bg-light" />
+                className="w-full px-5 py-3 border border-primary/10 rounded-xl text-sm outline-none focus:border-primary/30 bg-light" />
 
                 <input
                 type="email"
@@ -169,7 +160,7 @@ export function TourBookingPanel({ price, tourName, durationDays }: Props) {
                 placeholder="Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-5 py-3.5 border border-primary/10 rounded-xl text-sm outline-none focus:border-primary/30 bg-light" />
+                className="w-full px-5 py-3 border border-primary/10 rounded-xl text-sm outline-none focus:border-primary/30 bg-light" />
 
                 <input
                 type="tel"
@@ -177,20 +168,20 @@ export function TourBookingPanel({ price, tourName, durationDays }: Props) {
                 placeholder="WhatsApp / Phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full px-5 py-3.5 border border-primary/10 rounded-xl text-sm outline-none focus:border-primary/30 bg-light" />
+                className="w-full px-5 py-3 border border-primary/10 rounded-xl text-sm outline-none focus:border-primary/30 bg-light" />
 
                 <textarea
-                rows={3}
+                rows={2}
                 placeholder="Any special requirements or occasions?"
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
-                className="w-full px-5 py-3.5 border border-primary/10 rounded-xl text-sm outline-none focus:border-primary/30 bg-light resize-none">
+                className="w-full px-5 py-3 border border-primary/10 rounded-xl text-sm outline-none focus:border-primary/30 bg-light resize-none">
               </textarea>
               </div>
 
               <button
               type="submit"
-              className="w-full py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors mt-4">
+              className="w-full py-3.5 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors mt-3">
 
                 Request Proposal
               </button>
@@ -198,7 +189,7 @@ export function TourBookingPanel({ price, tourName, durationDays }: Props) {
               <button
               type="button"
               onClick={handleWhatsApp}
-              className="w-full py-4 bg-white text-[#25D366] border border-[#25D366]/30 rounded-xl font-medium hover:bg-[#25D366]/5 transition-colors flex items-center justify-center gap-2">
+              className="w-full py-3.5 bg-white text-[#25D366] border border-[#25D366]/30 rounded-xl font-medium hover:bg-[#25D366]/5 transition-colors flex items-center justify-center gap-2">
 
                 <MessageCircleIcon className="w-5 h-5" /> Chat on WhatsApp
               </button>
